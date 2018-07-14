@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+    <script>
+
+        function promptDirection(question) {
+            let result = prompt(question);
+            if (result.toLowerCase() == "left") return "L";
+            else if (result.toLowerCase() == "right") return "R";
+            else throw new Error("Invalid direction:" + result);
+        }
+
+        function look() {
+            if (promptDirection("Which direction ?") == "L") return "A hamburger !";
+            else return "A sandwich !";
+        }
+
+        try {
+            alert(look());
+            // console.log(look());
+        } catch (error) {
+            alert("Something went wrong:" + error);
+            // console.log("Something went wrong:" + error);
+        }
+    </script>
+    
+</body>
+</html>
