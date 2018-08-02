@@ -1,5 +1,5 @@
 # eloquent-javascript
-This is my training repo for the book Eloquent JavaScript, where I tryout stuff and put my execises solutions.
+This is my training repo for the book Eloquent JavaScript, where I tryout stuff and put some execises solutions.
 
 This very good book is available for free at :
 - http://eloquentjavascript.net/
