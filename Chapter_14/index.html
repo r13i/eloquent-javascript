@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>The DOM</title>
+    </head>
+
+    <body>
+        <p>Some content !</p>
+
+
+        <script>
+            function talksAbout (node, str) {
+                if (node.nodeType == Node.ELEMENT_NODE) {
+                    for(let i = 0; i < node.childNodes.length; ++i) {
+                        if (talksAbout(node.childNodes[i], str)) {
+                            return true;
+                        }
+                    }
+                    return false;
+                }
+                else if (node.nodeType == Node.TEXT_NODE) {
+                    return node.nodeValue.indexOf(str) > -1;
+                }
+            }
+
+            alert(talksAbout(document.body, "content"));
+        </script>
+
+    </body>
+</html>
